@@ -1,8 +1,8 @@
 FROM ruby:latest
 
-RUN apt-get update -qq && apt-get install -y build-essential ruby-sinatra
+RUN apt-get update -qq && apt-get install -y build-essential ruby-sinatra && apt-get clean
 
-ENV APP_HOME /app
+ENV APP_HOME=/app
 RUN mkdir $APP_HOME
 WORKDIR $APP_HOME
 
